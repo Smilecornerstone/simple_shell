@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * get_history_file - gets the history file
- * @info: parameter struct
- * Return: allocated string containg history file
- */
+ * get_history_file - It gets the history file
+ * @info: Parameter structure 
+ * Return: The allocated string containing history file
+ **/
 
 char *get_history_file(info_t *info)
 {
@@ -24,11 +24,12 @@ return (buf);
 }
 
 /**
- * write_history - creates a file, or appends to an existing file
- * @info: the parameter struct
+ * write_history - It creates a file, or appends to an existing file
+ * @info: The parameter structure 
  *
  * Return: 1, else -1
- */
+ **/
+
 int write_history(info_t *info)
 {
 ssize_t fd;
@@ -53,11 +54,12 @@ return (1);
 }
 
 /**
- * read_history - reads history from file
- * @info: the parameter struct
+ * read_history - It reads history from file
+ * @info: The parameter structure 
  *
- * Return: histcount on success, 0 otherwise
- */
+ * Return: Histcount on success, 0 otherwise
+ **/
+
 int read_history(info_t *info)
 {
 int i, last = 0, linecount = 0;
@@ -102,13 +104,14 @@ return (info->histcount);
 }
 
 /**
- * build_history_list - adds entry to a history linked list
+ * build_history_list - It adds entry to a history linked list
  * @info: Structure containing potential arguments
- * @buf: the buffer
- * @linecount: the history linecount, histcount
+ * @buf: The buffer
+ * @linecount: The history linecount, histcount
  *
  * Return: 0
- */
+ **/
+
 int build_history_list(info_t *info, char *buf, int linecount)
 {
 list_t *node = NULL;
@@ -121,12 +124,14 @@ if (!info->history)
 info->history = node;
 return (0);
 }
+
 /**
- * renumber_history - renumbers the history linked list
+ * renumber_history - It renumbers the history linked list
  * @info: Structure containing potential arguments.
  *
- * Return: the new histcount
- */
+ * Return: The new histcount
+ **/
+
 int renumber_history(info_t *info)
 {
 list_t *node = info->history;
