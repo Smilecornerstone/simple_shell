@@ -1,14 +1,13 @@
 #include "shell.h"
 
 /**
- * _strcpy - Copies a string
+ * _strcpy - It copies a string
+ * @dest: Where the string is copied to
+ * @src: Where the string is copied from 
  *
- * @dest: The destination
- *
- * @src: The source
- *
- * Return: Pointer to destination
- */
+ * Return: The pointer to where the string is copied to 
+ **/
+
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
@@ -25,11 +24,13 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup - Duplicates a string
- * @str: The string to duplicate
+ * _strdup - It duplicates a string
+ * @str: The string to be duplicated 
  *
- * Return: Pointer to the duplicated string
- */
+ * Return: The pointer to the duplicated string
+ **/
+
+
 char *_strdup(const char *str)
 {
 int length = 0;
@@ -48,11 +49,12 @@ return (ret);
 }
 
 /**
- *_puts - Prints an input string
+ *_puts - It prints an input string
  *@str: The string to be printed
  *
  * Return: Nothing
- */
+ **/
+
 void _puts(char *str)
 {
 int i = 0;
@@ -67,12 +69,12 @@ i++;
 }
 
 /**
- * _putchar - Writes the characters to stdout
- *
- * @c: The character to print
+ * _putchar - It writes the characters to stdout
+ * @c: The character to be printed
  *
  * Return: On success 1, on error -1
- */
+ **/
+
 int _putchar(char c)
 {
 	static int i;
