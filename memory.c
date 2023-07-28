@@ -1,12 +1,11 @@
 #include "shell.h"
 
 /**
- * bfree - Frees a pointer and NULLs the address
+ * bfree - It frees a pointer and NULLs the address
+ * @ptr: The address of the pointer to free
  *
- * @ptr: Address of the pointer to free
- *
- * Return: 1 for freed, otherwise 0.
- */
+ * Return: 1 for the freed, otherwise 0.
+ **/
 
 int bfree(void **ptr)
 {
