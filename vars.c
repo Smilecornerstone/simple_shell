@@ -1,13 +1,15 @@
 #include "shell.h"
 
 /**
- * is_chain - Test if current char in buffer is a chain delimeter
- * @info: The parameter struct
+ * is_chain - It tests if current char in buffer is a chain delimiter 
+ * @info: The parameter structure 
  * @buf: The char buffer
  * @p: Address of current position in buf
  *
  * Return: 1 , 0 otherwise
- */
+ **/
+
+
 int is_chain(info_t *info, char *buf, size_t *p)
 {
 	size_t j = *p;
@@ -36,20 +38,16 @@ int is_chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * check_chain - Checks we should continue chaining based on last status
- *
- * @info: The parameter struct
- *
+ * check_chain - It checks if we should continue chaining based on last status
+ * @info: The parameter structure 
  * @buf: The char buffer
- *
  * @p: Address of current position in buffer
- *
  * @i: Start of buffer
- *
  * @len: Length of buffer
  *
  * Return: Void
- */
+ **/
+
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t j = *p;
@@ -75,12 +73,12 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
- * replace_alias - Replaces an aliases in the tokenized string
- *
- * @info: The parameter struct
+ * replace_alias - It replaces an aliases in the tokenized string
+ * @info: The parameter structure 
  *
  * Return: 1 for replaced, 0 otherwise
- */
+ **/
+
 int replace_alias(info_t *info)
 {
 	int i;
@@ -105,12 +103,12 @@ int replace_alias(info_t *info)
 }
 
 /**
- * replace_vars - Replaces vars in the tokenized string
- *
- * @info: The parameter struct
+ * replace_vars - It replaces vars in the tokenized string
+ * @info: The parameter structure 
  *
  * Return: 1 for replaced, 0 otherwise
- */
+ **/
+
 int replace_vars(info_t *info)
 {
 	int i = 0;
@@ -147,14 +145,13 @@ int replace_vars(info_t *info)
 }
 
 /**
- * replace_string - Replaces string
- *
+ * replace_string - It replaces string
  * @old: Address of old string
- *
  * @new: New string
  *
  * Return: 1 for replaced, 0 otherwise
- */
+ **/
+
 int replace_string(char **old, char *new)
 {
 	free(*old);
