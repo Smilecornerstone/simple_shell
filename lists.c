@@ -1,13 +1,15 @@
 #include "shell.h"
 
 /**
- * add_node - Adds node to the start of the list
- * @head: Pointer address to head node
- * @str: Field node of str
- * @num: Index node used by history
+ * add_node - It adds node to the start of the list
+ * @head: The pointer address to head node
+ * @str: The field node of str
+ * @num: The index node used by history
  *
- * Return: Size of list
- */
+ * Return: The size of list
+ **/
+
+
 list_t *add_node(list_t **head, const char *str, int num)
 {
 list_t *new_head;
@@ -34,13 +36,15 @@ return (new_head);
 }
 
 /**
- * add_node_end - Adds node to the end of the list
- * @head: Pointer address to head node
- * @str: Field node of str
- * @num: Index node used by history
+ * add_node_end - It adds node to the end of the list
+ * @head: The pointer address to head node
+ * @str: The field node of str
+ * @num: The index node used by history
  *
- * Return: Size of list
- */
+ * Return: The size of list
+ **/
+
+
 list_t *add_node_end(list_t **head, const char *str, int num)
 {
 list_t *new_node, *node;
@@ -95,12 +99,14 @@ return (i);
 }
 
 /**
- * delete_node_at_index - Deletes node at given index
- * @head: Pointer address to first node
- * @index: Index node to delete
+ * delete_node_at_index - It deletes node at given index
+ * @head: The pointer address to first node
+ * @index: The index node to delete
  *
  * Return: 1 on success, 0 on failure
- */
+ **/
+
+
 int delete_node_at_index(list_t **head, unsigned int index)
 {
 list_t *node, *prev_node;
@@ -135,11 +141,13 @@ return (0);
 }
 
 /**
- * free_list - Frees all nodes of a list
- * @head_ptr: Pointer address to head node
+ * free_list - It frees all nodes of a list
+ * @head_ptr: The pointer address to head node
  *
  * Return: Void
- */
+ **/
+
+
 void free_list(list_t **head_ptr)
 {
 list_t *node, *next_node, *head;
