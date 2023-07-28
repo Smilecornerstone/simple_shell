@@ -39,9 +39,9 @@ extern char **environ;
 
 /**
  * struct liststr - The singly linked list
- * @num: Number field
+ * @num: The number field
  * @str: The string
- * @next: Points to the next node
+ * @next: It points to the next node
  */
 typedef struct liststr
 {
@@ -51,27 +51,27 @@ struct liststr *next;
 } list_t;
 
 /**
- *struct passinfo - Contains pseudo-arguements to pass into a function,
- *	allowing uniform prototype for function pointer struct
- *@arg: A string containing arguments generated from getline
- *@argv: An array of strings generated from arg
- *@path: A string path for the current command
- *@argc: The arg count
- *@line_count: The error count
- *@err_num: The error code for exit()s
- *@linecount_flag: Count the line of input if on
- *@fname: The program filename
- *@env: Linked list local copy of env
- *@environ: Custom modified copy of environ from LL env
- *@history: The node history
- *@alias: The alias node
- *@env_changed: On if the environment was changed
- *@status: The return status of the last executed cmd
- *@cmd_buf: The pointer address to cmd_buf, on if chaining
- *@cmd_buf_type: CMD_type ||, &&, ;
- *@readfd: The fd from which to read line input
- *@histcount: The history line num count
- */
+ * struct passinfo - It contains pseudo-arguments to pass into a function,
+ * allowing uniform prototype for function pointer struct
+ * @arg: A string containing arguments generated from getline
+ * @argv: An array of strings generated from arg
+ * @path: A string path for the current command
+ * @argc: The arg count
+ * @line_count: The error count
+ * @err_num: The error code for exit()s
+ * @linecount_flag: Count the line of input if on
+ * @fname: The program filename
+ * @env: Linked list local copy of env
+ * @environ: Custom modified copy of environ from LL env
+ * @history: The node history
+ * @alias: The alias node
+ * @env_changed: On if the environment was changed
+ * @status: The return status of the last executed cmd
+ * @cmd_buf: The pointer address to cmd_buf, on if chaining
+ * @cmd_buf_type: CMD_type ||, &&, ;
+ * @readfd: The fd from which to read line input
+ * @histcount: The history line num count
+ **/
 
 typedef struct passinfo
 {
@@ -101,10 +101,11 @@ typedef struct passinfo
 	0, 0, 0}
 
 /**
- *struct builtin - Contains builtin string and related function
- *@type: The builtin cmd flag
- *@func: The function
- */
+ * struct builtin - It contains builtin string and related function
+ * @type: The builtin cmd flag
+ * @func: The function
+ **/
+
 typedef struct builtin
 {
 char *type;
